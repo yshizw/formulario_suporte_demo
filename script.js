@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
         form.addEventListener("submit", (event) => {
             event.preventDefault();
 
-            // Get all form field values
             const firstName = document.querySelector("input[name=firstName]").value;
             const lastName = document.querySelector("input[name=lastName]").value;
             const email = document.querySelector("input[name=email]").value;
@@ -23,13 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const subject = document.querySelector("input[name=subject]").value;
             const message = document.querySelector("textarea[name=message]").value;
 
-            // Validate required fields
             if (!firstName || !lastName || !email || !department || !request || !priority || !subject || !message) {
-                alert("Por favor, preencha todos os campos obrigatórios.");
+                alert("Por favor, preencha todos os campos.");
                 return;
             }
 
-            // Prepare data for API
             const formData = {
                 firstName,
                 lastName,
