@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Suporte</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h1>Formulário de Suporte</h1>
+            <p>Demonstração: Portal de Abertura de Chamados de Suporte</p>
+        </div>
+        
+        <form>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName">Nome</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Sobrenome</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email corporativo</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="department">Departamento</label>
+                <select id="department" name="department" required>
+                    <option value="">Selecione o departamento</option>
+                    <option value="ti">TI</option>
+                    <option value="vendas">Vendas</option>
+                    <option value="financeiro">Financeiro</option>
+                    <option value="rh">RH</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="request">Solicitação</label>
+                <select id="request" name="request" required>
+                    <option value="">Tipo de solicitação</option>
+                    <option value="incident">Incidente (algo parou de funcionar)</option>
+                    <option value="requisition">Requisição de serviço (preciso de algo novo)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="priority">Prioridade</label>
+                <select id="priority" name="priority" required>
+                    <option value="">Selecione a prioridade</option>
+                    <option value="low">Baixa</option>
+                    <option value="medium">Média</option>
+                    <option value="high">Alta</option>
+                    <option value="critical">Crítica</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Assunto</label>
+                <input type="text" id="subject" name="subject" placeholder="Ex: Problema com login" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Descrição</label>
+                <textarea id="message" name="message" placeholder="Descreva o problema" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Enviar Chamado</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
